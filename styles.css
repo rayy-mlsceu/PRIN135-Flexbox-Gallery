@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #0a0a23;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 45px 20px;
+  background: linear-gradient(135deg, #050b2c, #0a0a23);
+  color: white;
+  border-bottom: 5px solid #fdb347;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(10, 10, 35, 0.12);
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 4px solid #0a0a23;
+  padding: 6px;
+  background: #fdb347;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 18px rgba(10, 10, 35, 0.2);
+}
+
+.gallery img:hover {
+  transform: translateY(-8px);
+  border-color: #fdb347;
+  box-shadow: 0 15px 30px rgba(253, 179, 71, 0.35);
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+/* Mobile Design */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .gallery img {
+    height: 250px;
+  }
+}
